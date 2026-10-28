@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
   background: color-mix(in srgb, var(--page) 78%, transparent); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
-.brand span { color: var(--blue); }
+.brand span { color: inherit; }
 .brand .suffix { color: var(--faint); font-weight: 700; }
 .brand:hover { text-decoration: none; }
 .top nav { display: flex; gap: 22px; font-size: 15px; }
