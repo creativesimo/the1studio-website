@@ -158,7 +158,13 @@ img { max-width: 100%; display: block; }
 .page li { margin: 6px 0; }
 .page p b, .page li b { color: var(--ink); }
 .contact { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); margin: 24px 0; }
-.contact a { font-size: 18px; font-weight: 600; }
+.contact { scroll-margin-top: 90px; }
+.contact-address { margin: 10px 0 14px !important; font-size: 20px; font-weight: 700; color: var(--ink) !important; user-select: all; word-break: break-all; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-actions .store { font-weight: 600; }
+.copy { border: 1px solid var(--line); background: var(--tint); color: var(--blue-ink); font: inherit; font-weight: 600; padding: 10px 18px;
+  border-radius: 12px; cursor: pointer; }
+.copy:hover { border-color: var(--blue); }
 
 /* Footer */
 footer { border-top: 1px solid var(--line); padding: 32px 0 44px; color: var(--muted); font-size: 14px; }

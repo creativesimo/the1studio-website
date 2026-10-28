@@ -1,3 +1,13 @@
+// "Copy" buttons (the support page's email address): copying works even without a mail app.
+document.querySelectorAll("button[data-copy]").forEach(function (button) {
+  var original = button.textContent;
+  button.addEventListener("click", function () {
+    var done = function (text) { button.textContent = text; setTimeout(function () { button.textContent = original; }, 2500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(button.dataset.copy).then(function () { done("Copied!"); }, function () { done("Select the address above to copy it"); });
+    else done("Select the address above to copy it");
+  });
+});
+
 // "Coming soon" store buttons: until an app is live in a store, its button opens this note.
 // When an app is approved, replace its <button class="store"> with a link to the store page.
 (function () {
