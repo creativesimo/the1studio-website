@@ -138,15 +138,24 @@ img { max-width: 100%; display: block; }
 }
 
 /* Store buttons (real links replace "Coming soon" once the apps are approved) */
-.stores { display: flex; flex-wrap: wrap; gap: 10px; }
-.store { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 12px; background: var(--blue); color: #fff;
-  box-shadow: 0 6px 16px rgba(7, 110, 255, 0.28);
-  font-weight: 600; font-size: 15px; line-height: 1.15; min-height: 50px; }
-.store:hover { text-decoration: none; opacity: 0.88; }
-.store small { display: block; font-weight: 500; font-size: 11px; opacity: 0.85; }
+.store { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 14px; color: #fff;
+  background: linear-gradient(180deg, #2b87ff 0%, var(--blue) 55%, #0560e6 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(7, 110, 255, 0.35), 0 10px 22px -8px rgba(7, 110, 255, 0.6);
+  font-weight: 600; font-size: 15px; line-height: 1.15; min-height: 50px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.store:hover { text-decoration: none; transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 2px 4px rgba(7, 110, 255, 0.3), 0 16px 30px -10px rgba(7, 110, 255, 0.7); }
+.store:active { transform: translateY(0) scale(0.98); }
+.store:focus-visible { outline: 3px solid color-mix(in srgb, var(--blue) 45%, transparent); outline-offset: 3px; }
 .store svg { width: 22px; height: 22px; flex: none; }
-.store[aria-disabled="true"] { cursor: default; }
-.store[aria-disabled="true"]:hover { opacity: 1; }
+
+/* Badge layout: logo, a small "Coming soon to the" line, then the store name. */
+.stores { display: flex; flex-wrap: wrap; gap: 12px; }
+.stores .store { gap: 12px; min-height: 58px; min-width: 216px; padding: 9px 22px 9px 16px; }
+.stores .store svg { width: 27px; height: 27px; }
+.stores .store span { display: flex; flex-direction: column; gap: 3px; }
+.stores .store small { font-weight: 500; font-size: 11.5px; letter-spacing: 0.01em; opacity: 0.85; }
+.stores .store b { font-weight: 650; font-size: 17.5px; letter-spacing: -0.015em; }
 
 /* Text pages (privacy, support) */
 .page { padding: 64px 0 80px; }
