@@ -1,4 +1,4 @@
-/* the1studio.com — one stylesheet for every page. Colours follow the app family (blue #076EFF). */
+/* minyapps.com — one stylesheet for every page. Colours follow the app family (blue #076EFF). */
 :root {
   --blue: #076eff;
   --blue-ink: #0f66f0;
@@ -43,7 +43,7 @@ img { max-width: 100%; display: block; }
 .top { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px);
   background: color-mix(in srgb, var(--page) 78%, transparent); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.brand { font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: var(--ink); }
+.brand { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
 .brand span { color: var(--blue); }
 .brand:hover { text-decoration: none; }
 .top nav { display: flex; gap: 22px; font-size: 15px; }
