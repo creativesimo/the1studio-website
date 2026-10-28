@@ -14,7 +14,7 @@ Prices on the site: 7-day free trial, then $4.99 once, for each app (decided 27 
 
 Hosting: GitHub Pages from the public repo creativesimo/the1studio-website (branch main), live since 27 October 2026 at https://creativesimo.github.io/the1studio-website/. To update: copy this folder into a clone of that repo, commit and push.
 
-Brand: on 28 October 2026 the brand changed from "the1studio" to **Miny** (wordmark `Min<span>y</span><span class="suffix">apps</span>`: "Miny" in ink, "apps" in light blue so it reads as mini apps), because the1studio.com was owned by someone else. The owner bought **minyapps.com** at GoDaddy on 28 October 2026.
+Brand: on 28 October 2026 the brand changed from "the1studio" to **Miny** (wordmark `Min<span>y</span><span class="suffix">apps</span>`: "Miny" in ink, "apps" in grey so it reads as mini apps), because the1studio.com was owned by someone else. The owner bought **minyapps.com** at GoDaddy on 28 October 2026.
 
 Domain setup (the `CNAME` file holds `minyapps.com`):
 1. The repo's Pages settings use the custom domain minyapps.com, with Enforce HTTPS on.

@@ -4,7 +4,7 @@
   --blue-ink: #0f66f0;
   --ink: #111827;
   --muted: #4d5e75;
-  --soft-blue: #9cc3ff;
+  --faint: #98a2b1;
   --line: rgba(15, 23, 42, 0.1);
   --page: #f4f7fb;
   --card: #ffffff;
@@ -17,7 +17,7 @@
     --blue-ink: #99d1ff;
     --ink: #f3f5f8;
     --muted: #b4bfcd;
-    --soft-blue: #3f6fb5;
+    --faint: #5f6c80;
     --line: rgba(255, 255, 255, 0.12);
     --page: #0e141d;
     --card: #161e2a;
@@ -47,7 +47,7 @@ img { max-width: 100%; display: block; }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
 .brand span { color: inherit; }
-.brand .suffix { color: var(--soft-blue); font-weight: 700; }
+.brand .suffix { color: var(--faint); font-weight: 700; }
 .brand:hover { text-decoration: none; }
 .top nav { display: flex; gap: 22px; font-size: 15px; }
 .top nav a { color: var(--muted); }
