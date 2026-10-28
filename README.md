@@ -5,7 +5,8 @@ The Miny website: one page for the three apps (NameThatFile, Image Resizer, Imag
 - Plain HTML and one stylesheet; no build step, no cookies, no analytics, no external fonts or scripts.
 - `index.html`: apps, descriptions, screenshots, store buttons.
 - `privacy.html`: privacy policy (the apps collect no data).
-- `support.html`: help and contact.
+- `support.html`: help and contact (the Contact link goes to its `#contact` box).
+- `terms.html`: terms of use (store licences, 7-day trial, one-time price, refunds through Apple/Microsoft, consumer rights unaffected).
 - `assets/`: app icons (256 px) and screenshots, made from the apps' own icons and QA screenshots.
 
 Store buttons say **Coming soon**. Clicking one opens a note (in `site.js`) that asks visitors to save the page and check back. Its **Save this page** button copies the link and shows the bookmark shortcut on computers, and opens the share sheet on phones (websites cannot add bookmarks themselves). When an app is approved, replace its `<button class="store" data-app=… data-store=…>` with an `<a class="store" href="…store page…">`. The support and contact email is wassimdesign@gmail.com for now; it is planned to become support@minyapps.com, forwarded to that Gmail.
