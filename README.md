@@ -17,5 +17,5 @@ Hosting: GitHub Pages from the public repo creativesimo/the1studio-website (bran
 Brand: on 28 October 2026 the brand changed from "the1studio" to **Miny** (wordmark `Min<span>y</span><span class="suffix">apps</span>`: "Miny" in ink, "apps" in grey so it reads as mini apps), because the1studio.com was owned by someone else. The owner bought **minyapps.com** at GoDaddy on 28 October 2026.
 
 Domain setup (the `CNAME` file holds `minyapps.com`):
-1. The repo's Pages settings use the custom domain minyapps.com, with Enforce HTTPS on.
+1. The repo's Pages settings use the custom domain minyapps.com, with Enforce HTTPS on (certificate approved 28 October 2026, expires 26 January 2027, renewed by GitHub automatically). The certificate was only issued after the custom domain was removed and added again.
 2. GoDaddy DNS (GoDaddy's own nameservers): A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for www pointing to creativesimo.github.io. GoDaddy's default parking records were removed.
