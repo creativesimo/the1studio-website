@@ -8,7 +8,7 @@ The Miny website: one page for the three apps (NameThatFile, Image Resizer, Imag
 - `support.html`: help and contact.
 - `assets/`: app icons (256 px) and screenshots, made from the apps' own icons and QA screenshots.
 
-Store buttons say **Coming soon**. Clicking one opens a note (in `site.js`) that asks visitors to bookmark the page and offers an "Email me when it's ready" link. When an app is approved, replace its `<button class="store" data-app=… data-store=…>` with an `<a class="store" href="…store page…">`. The support and contact email is wassimdesign@gmail.com for now; it is planned to become support@minyapps.com, forwarded to that Gmail.
+Store buttons say **Coming soon**. Clicking one opens a note (in `site.js`) that asks visitors to save the page and check back. Its **Save this page** button copies the link and shows the bookmark shortcut on computers, and opens the share sheet on phones (websites cannot add bookmarks themselves). When an app is approved, replace its `<button class="store" data-app=… data-store=…>` with an `<a class="store" href="…store page…">`. The support and contact email is wassimdesign@gmail.com for now; it is planned to become support@minyapps.com, forwarded to that Gmail.
 
 Prices on the site: 7-day free trial, then $4.99 once, for each app (decided 27 October 2026).
 
