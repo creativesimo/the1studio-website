@@ -37,3 +37,8 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - The privacy page explains website analytics separately from the offline apps. See `SEO-ANALYTICS.md` for reporting and verification details.
 
 Google Search Console ownership was verified by HTML tag on 29 October 2026. The seven-URL sitemap was submitted successfully; Google reported **Success** and **7 discovered pages**. The verification tag must remain in the homepage. Live GA4 page-view and store-click collection was confirmed with HTTP 204 responses.
+
+## Favicon and icons (29 October 2026)
+- New Minyapps mark: a frosted white "M" on the apps' sky-to-blue gradient (#08c2fb → #0163fb), rounded like the app icons. Generator: `design/make_mark.py` (with the 1024 px master `design/minyapps-mark-1024.png`); the SVG is `favicon.svg`.
+- Files: `favicon.ico` (16/32/48), `favicon.svg`, `favicon-48.png`, `assets/favicon-{16,32,48,96,192,512}.png`, `assets/apple-touch-icon.png` (180, square), `assets/maskable-512.png` (Android), `assets/minyapps-mark-512.png` (Organization logo in the JSON-LD) and `site.webmanifest`.
+- Every page links them with root paths (`/favicon.ico`, `/favicon.svg?v=2`, 96 and 192 px PNGs, the Apple touch icon and the manifest). Google shows a favicon only when one is a multiple of 48 px and crawlable; after a change it can take days to weeks to appear in results. Request indexing of https://minyapps.com/ in Search Console to speed it up.
