@@ -25,5 +25,5 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - Each page has its own title and description, canonical, Open Graph and Twitter tags (`assets/share-card.png`), and favicons (`favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/minyapps-mark-512.png`).
 - `index.html` carries JSON-LD (Organization, WebSite and 3 SoftwareApplication).
 - `robots.txt` and `sitemap.xml` are in the site root (update `lastmod` when pages change). `404.html` sends old addresses such as `/lander` to the home page.
-- The store buttons still say Coming soon. After approval, link them to the store pages (the IDs are in `/Users/home/Documents/Codex/MINYAPPS-STATUS.md`).
-- Status of the whole family: `/Users/home/Documents/Codex/MINYAPPS-STATUS.md`.
+- The store buttons still say Coming soon. After approval, link them to the store pages (the IDs are in `MINYAPPS-STATUS.md` in the Codex workspace folder (the folder that holds the dated project folders)).
+- Status of the whole family: `MINYAPPS-STATUS.md` in the Codex workspace folder (the folder that holds the dated project folders).
