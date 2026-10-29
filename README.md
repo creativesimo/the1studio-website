@@ -20,3 +20,10 @@ Brand: on 28 October 2026 the brand changed from "the1studio" to **Miny** (wordm
 Domain setup (the `CNAME` file holds `minyapps.com`):
 1. The repo's Pages settings use the custom domain minyapps.com, with Enforce HTTPS on (certificate approved 28 October 2026, expires 26 January 2027, renewed by GitHub automatically). The certificate was only issued after the custom domain was removed and added again.
 2. GoDaddy DNS (GoDaddy's own nameservers): A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for www pointing to creativesimo.github.io. GoDaddy's default parking records were removed.
+
+## SEO and status (29 October 2026)
+- Each page has its own title and description, canonical, Open Graph and Twitter tags (`assets/share-card.png`), and favicons (`favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/minyapps-mark-512.png`).
+- `index.html` carries JSON-LD (Organization, WebSite and 3 SoftwareApplication).
+- `robots.txt` and `sitemap.xml` are in the site root (update `lastmod` when pages change). `404.html` sends old addresses such as `/lander` to the home page.
+- The store buttons still say Coming soon. After approval, link them to the store pages (the IDs are in `/Users/home/Documents/Codex/MINYAPPS-STATUS.md`).
+- Status of the whole family: `/Users/home/Documents/Codex/MINYAPPS-STATUS.md`.
