@@ -35,3 +35,5 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - Events cover page views, app demos/details, each app’s Mac/Windows store buttons, saving the page link and contact actions. Current store clicks are labeled `coming_soon`, not downloads or purchases.
 - Optional account data sharing and automatic enhanced measurement were disabled. The website sends explicit, limited events and strips URL query strings and fragments from analytics page/referrer values. Advertising personalization and Google signals are disabled in the tag configuration.
 - The privacy page explains website analytics separately from the offline apps. See `SEO-ANALYTICS.md` for reporting and verification details.
+
+Google Search Console ownership was verified by HTML tag on 29 October 2026. The seven-URL sitemap was submitted successfully; Google reported **Success** and **7 discovered pages**. The verification tag must remain in the homepage. Live GA4 page-view and store-click collection was confirmed with HTTP 204 responses.

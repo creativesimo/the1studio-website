@@ -10,12 +10,13 @@ Updated 29 October 2026.
 - JSON-LD describes the organization, website, software and breadcrumbs. It contains no invented ratings or reviews. Purchase offers are omitted until the apps are actually available in stores.
 - The homepage’s Google site-verification meta tag must remain in place for Search Console ownership verification. It is a public verification token, not a login credential.
 - Google Search Console property: `https://minyapps.com/` (URL-prefix verification; no DNS changes required).
-- Submission and indexing results are recorded after live deployment. A sitemap or indexing request does not guarantee indexing, a ranking or a completion date.
+- Verified and submitted on 29 October 2026: Search Console confirmed ownership through the HTML tag, accepted `sitemap.xml` with **Success**, and discovered **7 pages**. Submission does not guarantee indexing, a ranking or a completion date.
 
 ## Analytics setup
 
 - Google Analytics account: **Minyapps**.
-- Property and web stream: **Minyapps website**.
+- Property and web stream: **Minyapps website**. Account ID `413882461`; property ID `561302444`.
+- Dashboard: https://analytics.google.com/analytics/web/#/a413882461p561302444/reports/intelligenthome
 - Web stream ID: `16225390825`.
 - Measurement ID: `G-GF8Z1SLR89` (public).
 - Reporting time zone: Ireland. Reporting currency: EUR.
@@ -40,9 +41,11 @@ Store clicks currently have `availability=coming_soon`. These measure interest; 
 
 - Realtime shows recent consenting visitors and events.
 - Pages and screens shows page views; traffic acquisition shows how measured visits arrived.
-- Events shows counts for `store_click` and the other actions above. Custom event dimensions can separate app names and stores in reports/explorations.
+- Events shows counts for `store_click` and the other actions above. Two event-scoped custom dimensions were registered: **Minyapps app** (`app_name`) and **Store platform** (`store`), for breakdowns by product and Mac/Windows store. Newly registered fields can take time to become available in reports.
 - Counts exclude people who decline analytics or block it, and cannot reconstruct visits before installation. Search Console measures Google Search impressions/clicks separately and can take time to populate.
 
 ## Verification
 
 Local tests exercise consent, refusal persistence, opt-in after refusal, all six store buttons, app-detail navigation, contact actions, cookie cleanup on withdrawal, sanitized URLs, and mobile layout. Google requests are stubbed during those tests so synthetic traffic is not sent to the live property. Static checks cover titles, canonicals, one H1 per page, JSON-LD, sitemap URLs, anchors and local assets.
+
+Live verification after publishing: the seven URLs/scripts checked matched the tested source. One explicitly approved consenting verification visit and one NameThatFile/Mac store-button click were sent to the production GA4 stream; Google collection responses were HTTP 204. Those actions are included in the initial statistics. Synthetic local consent tests used stubbed Google requests.
