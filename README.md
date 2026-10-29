@@ -1,9 +1,10 @@
 # minyapps.com
 
-The Miny website: one page for the three apps (NameThatFile, Image Resizer, Image Optimizer), plus the privacy policy and support pages both app stores require.
+The Minyapps website: a home page and individual pages for NameThatFile, Image Resizer and Image Optimizer, plus the privacy policy and support pages both app stores require.
 
-- Plain HTML and one stylesheet; no build step, no cookies, no analytics, no external fonts or scripts.
+- Plain HTML and one stylesheet; no build step or external fonts. Optional Google Analytics loads only after a visitor opts in; the apps themselves still have no analytics.
 - `index.html`: apps, descriptions, screenshots, store buttons.
+- `namethatfile.html`, `image-resizer.html`, `image-optimizer.html`: detailed product pages with truthful features, platform differences, FAQs and coming-soon store buttons.
 - `privacy.html`: privacy policy (the apps collect no data).
 - `support.html`: help and contact (the Contact link goes to its `#contact` box).
 - `terms.html`: terms of use (store licences, 7-day trial, one-time price, refunds through Apple/Microsoft, consumer rights unaffected).
@@ -27,3 +28,10 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - `robots.txt` and `sitemap.xml` are in the site root (update `lastmod` when pages change). `404.html` sends old addresses such as `/lander` to the home page.
 - The store buttons still say Coming soon. After approval, link them to the store pages (the IDs are in `MINYAPPS-STATUS.md` in the Codex workspace folder (the folder that holds the dated project folders)).
 - Status of the whole family: `MINYAPPS-STATUS.md` in the Codex workspace folder (the folder that holds the dated project folders).
+
+## Website analytics (29 October 2026)
+- Google Analytics account: Minyapps. Property: Minyapps website. Web stream: Minyapps website (`G-GF8Z1SLR89`). Reporting uses Ireland time and EUR.
+- `analytics-config.js` contains only the public measurement ID. `analytics.js` loads the Google tag after explicit analytics consent. Refusing sends no Google analytics requests; the footer’s Privacy settings button lets a visitor change their choice.
+- Events cover page views, app demos/details, each app’s Mac/Windows store buttons, saving the page link and contact actions. Current store clicks are labeled `coming_soon`, not downloads or purchases.
+- Optional account data sharing and automatic enhanced measurement were disabled. The website sends explicit, limited events and strips URL query strings and fragments from analytics page/referrer values. Advertising personalization and Google signals are disabled in the tag configuration.
+- The privacy page explains website analytics separately from the offline apps. See `SEO-ANALYTICS.md` for reporting and verification details.
