@@ -250,6 +250,8 @@ footer nav { flex-wrap: wrap; }
 
 /* Mac App Store button while the Mac apps are in review: greyed out, not clickable, "Coming soon" underneath. */
 .store-soon { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+/* Keep both badges at their own height instead of stretching to the column with the note. */
+.stores { align-items: flex-start; }
 .store.store-off { background: #c9cfd8; color: #f4f6f9; box-shadow: none; cursor: default; pointer-events: none; }
 .store.store-off:hover { transform: none; }
 .soon-note { font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
