@@ -247,3 +247,10 @@ footer nav { flex-wrap: wrap; }
   .product-screenshot { max-width: 390px; margin: 0 auto; }
   .page h1 { font-size: clamp(30px, 8vw, 40px); }
 }
+
+/* Mac App Store button while the Mac apps are in review: greyed out, not clickable, "Coming soon" underneath. */
+.store-soon { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+.store.store-off { background: #c9cfd8; color: #f4f6f9; box-shadow: none; cursor: default; pointer-events: none; }
+.store.store-off:hover { transform: none; }
+.soon-note { font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
+@media (prefers-color-scheme: dark) { .store.store-off { background: #3a4252; color: #9aa4b5; } }
