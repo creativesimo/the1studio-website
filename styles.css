@@ -261,25 +261,25 @@ footer nav { flex-wrap: wrap; }
 /* Section titles on the home page, and the Phone apps card in TidyTuck's own colours */
 .section-title { font-size: 26px; letter-spacing: -0.025em; margin: 8px 0 18px; }
 .section-title span { font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
-.phone-apps { margin: 0 0 72px; }
-.tidytuck-card { display: grid; grid-template-columns: auto 1fr auto; gap: 26px; align-items: center; padding: 30px 34px; border-radius: 30px; color: #1b2230;
-  background: radial-gradient(500px 300px at 0% 0%, #fbf7ef, rgba(251, 247, 239, 0) 70%), linear-gradient(120deg, #f6f1e8 0%, #ebe8f0 50%, #d6dff7 100%);
-  border: 1px solid rgba(27, 34, 48, 0.07); box-shadow: 0 1px 2px rgba(27, 34, 48, 0.05), 0 18px 44px rgba(58, 109, 176, 0.16); overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; }
-.tidytuck-card:hover { text-decoration: none; transform: translateY(-4px); box-shadow: 0 2px 4px rgba(27, 34, 48, 0.05), 0 24px 54px rgba(58, 109, 176, 0.24); }
-.tidytuck-card > img:first-child { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 12px 26px rgba(58, 109, 176, 0.3); }
-.tidytuck-card h3 { margin: 0; font-size: 26px; letter-spacing: -0.03em; }
-.tidytuck-card p { margin: 6px 0 0; color: #5d6676; font-size: 15.5px; max-width: 520px; }
-.tidytuck-card .problem { color: #1b2230; font-weight: 600; }
-.tidytuck-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px;
-  background: linear-gradient(100deg, #69a5e3, #3a6db0 45%, #8c78d9); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.tidytuck-shot { width: 180px; border-radius: 22px; margin: -10px 0 -60px; box-shadow: 0 18px 36px rgba(27, 34, 48, 0.18); }
-.phone-note { text-align: center; color: var(--muted); font-size: 14.5px; margin: 16px 0 0; }
-@media (max-width: 760px) {
-  .tidytuck-card { grid-template-columns: auto 1fr; padding: 24px; }
-  .tidytuck-shot { display: none; }
-}
-@media (prefers-reduced-motion: reduce) { .tidytuck-card, .tidytuck-card:hover { transition: none; transform: none; } }
+.phone-apps { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 32px; align-items: center; margin: 0 0 80px; }
+.phone-app { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.phone-app img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 12px 26px rgba(58, 109, 176, 0.3); }
+.phone-app h3 { margin: 0; font-size: 24px; letter-spacing: -0.025em; }
+.phone-app span { font-size: 14px; color: var(--muted); }
+.phone-head { font-size: clamp(32px, 4.4vw, 46px); font-weight: 800; line-height: 1.04; letter-spacing: -0.04em; margin: 0 0 14px; }
+.phone-head span { background: linear-gradient(100deg, #69a5e3, #3a6db0 45%, #8c78d9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.phone-lead { color: var(--muted); font-size: 17px; margin: 0 0 18px; max-width: 470px; }
+.phone-points { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 8px; }
+.phone-points li { position: relative; padding-left: 28px; font-size: 15.5px; font-weight: 600; }
+.phone-points li::before { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 50%;
+  background: linear-gradient(135deg, #69a5e3, #8c78d9) center / cover; -webkit-mask: radial-gradient(circle, #000 0 100%); }
+.phone-points li::after { content: ""; position: absolute; left: 5px; top: 8px; width: 7px; height: 4px; border: 2px solid #fff; border-top: 0; border-right: 0; transform: rotate(-45deg); }
+.phone-more { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 16px; color: #fff; font-weight: 700; font-size: 16px;
+  background: linear-gradient(110deg, #69a5e3, #3a6db0 50%, #8c78d9); box-shadow: 0 12px 26px rgba(58, 109, 176, 0.3); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.phone-more:hover { text-decoration: none; transform: translateY(-2px); box-shadow: 0 16px 32px rgba(58, 109, 176, 0.38); }
+.phone-note { color: var(--muted); font-size: 14px; margin: 14px 0 0; }
+@media (max-width: 820px) { .phone-apps { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+@media (prefers-reduced-motion: reduce) { .phone-more, .phone-more:hover { transition: none; transform: none; } }
 
 /* Narrow phones: four nav links beside the logo; Privacy stays in the footer */
 @media (max-width: 560px) {

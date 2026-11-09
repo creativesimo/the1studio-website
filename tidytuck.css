@@ -41,7 +41,7 @@
 .tt footer { border-top-color: var(--tt-line); }
 
 /* Hero: words on the left, the vertical film on the right */
-.tt-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 56px; align-items: center; padding: 64px 0 40px; }
+.tt-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; padding: 48px 0 24px; }
 .tt-app { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
 .tt-app img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 10px 24px rgba(58, 109, 176, 0.3); }
 .tt-app b { display: block; font-size: 22px; letter-spacing: -0.02em; }
