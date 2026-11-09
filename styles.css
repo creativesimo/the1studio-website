@@ -163,6 +163,7 @@ img { max-width: 100%; display: block; }
 .page h1 { font-size: 40px; letter-spacing: -0.03em; margin: 0 0 6px; }
 .page .meta { color: var(--muted); margin: 0 0 36px; }
 .page h2 { font-size: 21px; margin: 36px 0 8px; }
+.page h3 { font-size: 17px; margin: 22px 0 6px; }
 .page p, .page li { color: var(--muted); }
 .page li { margin: 6px 0; }
 .page p b, .page li b { color: var(--ink); }
@@ -256,3 +257,36 @@ footer nav { flex-wrap: wrap; }
 .store.store-off:hover { transform: none; }
 .soon-note { font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: 0.01em; }
 @media (prefers-color-scheme: dark) { .store.store-off { background: #3a4252; color: #9aa4b5; } }
+
+/* Section titles on the home page, and the Phone apps card in TidyTuck's own colours */
+.section-title { font-size: 26px; letter-spacing: -0.025em; margin: 8px 0 18px; }
+.section-title span { font-size: 15px; font-weight: 500; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+.phone-apps { margin: 0 0 72px; }
+.tidytuck-card { display: grid; grid-template-columns: auto 1fr auto; gap: 26px; align-items: center; padding: 30px 34px; border-radius: 30px; color: #1b2230;
+  background: radial-gradient(500px 300px at 0% 0%, #fbf7ef, rgba(251, 247, 239, 0) 70%), linear-gradient(120deg, #f6f1e8 0%, #ebe8f0 50%, #d6dff7 100%);
+  border: 1px solid rgba(27, 34, 48, 0.07); box-shadow: 0 1px 2px rgba(27, 34, 48, 0.05), 0 18px 44px rgba(58, 109, 176, 0.16); overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.tidytuck-card:hover { text-decoration: none; transform: translateY(-4px); box-shadow: 0 2px 4px rgba(27, 34, 48, 0.05), 0 24px 54px rgba(58, 109, 176, 0.24); }
+.tidytuck-card > img:first-child { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 12px 26px rgba(58, 109, 176, 0.3); }
+.tidytuck-card h3 { margin: 0; font-size: 26px; letter-spacing: -0.03em; }
+.tidytuck-card p { margin: 6px 0 0; color: #5d6676; font-size: 15.5px; max-width: 520px; }
+.tidytuck-card .problem { color: #1b2230; font-weight: 600; }
+.tidytuck-card .more { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 15px;
+  background: linear-gradient(100deg, #69a5e3, #3a6db0 45%, #8c78d9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tidytuck-shot { width: 180px; border-radius: 22px; margin: -10px 0 -60px; box-shadow: 0 18px 36px rgba(27, 34, 48, 0.18); }
+.phone-note { text-align: center; color: var(--muted); font-size: 14.5px; margin: 16px 0 0; }
+@media (max-width: 760px) {
+  .tidytuck-card { grid-template-columns: auto 1fr; padding: 24px; }
+  .tidytuck-shot { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .tidytuck-card, .tidytuck-card:hover { transition: none; transform: none; } }
+
+/* Narrow phones: four nav links beside the logo; Privacy stays in the footer */
+@media (max-width: 560px) {
+  .top nav { gap: 13px; font-size: 13.5px; }
+  .top nav a { white-space: nowrap; }
+  .top .wrap { gap: 14px; }
+  .brand { font-size: 20px; flex-shrink: 0; }
+  .top nav a[href="privacy.html"] { display: none; }
+}
+@media (max-width: 370px) { .top nav { gap: 10px; font-size: 13px; } .brand { font-size: 19px; } }

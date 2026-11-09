@@ -26,7 +26,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png?v=2">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=14">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -94,6 +94,19 @@
         "@id": "https://minyapps.com/#org"
       },
       "@id": "https://minyapps.com/image-optimizer.html#app"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "TidyTuck",
+      "description": "Keeps everything you buy in one place: each item with its receipts, photos, return date and warranty, read and organised on your iPhone.",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "iOS 18 or later",
+      "image": "https://minyapps.com/assets/tidytuck/tidytuck-icon.png",
+      "url": "https://minyapps.com/tidytuck.html",
+      "publisher": {
+        "@id": "https://minyapps.com/#org"
+      },
+      "@id": "https://minyapps.com/tidytuck.html#app"
     }
   ]
 }
@@ -106,7 +119,8 @@
     <div class="wrap">
       <a class="brand" href="./">Min<span>y</span><span class="suffix">apps</span></a>
       <nav aria-label="Main">
-        <a href="#apps">Apps</a>
+        <a href="#apps">Desktop apps</a>
+        <a href="#phone-apps">Phone apps</a>
         <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
       </nav>
@@ -115,11 +129,12 @@
 
   <main class="wrap">
     <section class="hero">
-      <h1>Small apps for the <em>everyday chores</em> on your computer.</h1>
+      <h1>Small apps for the <em>everyday chores</em> on your computer and phone.</h1>
       <p>Messy file names. Photos too big to send. Images that slow down your website. Little things that waste your time every day, so we made each one a one-click job.</p>
     </section>
 
-    <section class="apps" id="apps" aria-label="Our apps">
+    <h2 class="section-title" id="desktop-apps">Desktop apps <span>Mac and Windows</span></h2>
+    <section class="apps" id="apps" aria-label="Desktop apps">
       <a href="#namethatfile">
         <img src="assets/namethatfile-icon.png" alt="" width="76" height="76">
         <h3>NameThatFile</h3>
@@ -147,6 +162,21 @@
       <div class="private"><strong>Private by design</strong><span>No app accounts or file uploads. Your files stay on your computer.</span></div>
       <div class="trial"><strong>Try free for 7 days</strong><span>Then a one-time $4.99. No subscription, updates included.</span></div>
       <div class="both"><strong>Mac and Windows</strong><span>Available now on the Microsoft Store. Coming soon to the Mac App Store.</span></div>
+    </section>
+
+    <h2 class="section-title" id="phone-apps">Phone apps <span>iPhone</span></h2>
+    <section class="phone-apps" aria-label="Phone apps">
+      <a class="tidytuck-card" href="tidytuck.html">
+        <img src="assets/tidytuck/tidytuck-icon.png" alt="" width="84" height="84">
+        <div>
+          <h3>TidyTuck</h3>
+          <p class="problem">Lost the receipt? Missed a return?</p>
+          <p>Keep everything you buy in one place, with its receipts, return date and warranty. Snap a receipt, tag or screenshot and TidyTuck fills in the details.</p>
+          <span class="more">See TidyTuck →</span>
+        </div>
+        <img class="tidytuck-shot" src="assets/tidytuck/shot-05.jpg" alt="" width="180" loading="lazy">
+      </a>
+      <p class="phone-note">Private on your iPhone · One-time purchase · Coming soon to the App Store</p>
     </section>
 
     <section class="app" id="namethatfile">
