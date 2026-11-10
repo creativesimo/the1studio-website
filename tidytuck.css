@@ -116,4 +116,8 @@
   .tt-features, .tt-promise { grid-template-columns: minmax(0, 1fr); }
 }
 @media (prefers-reduced-motion: reduce) { .tt-feature, .tt-feature:hover { transition: none; transform: none; } }
-@media (max-width: 420px) { .tt-problem { grid-template-columns: minmax(0, 1fr); } .tt-problem b { overflow-wrap: anywhere; } }
+@media (max-width: 420px) {
+  .tt-hero { overflow-x: clip; overflow-clip-margin: 20px; }
+  .tt-problem { grid-template-columns: minmax(0, 1fr); }
+  .tt-problem b { overflow-wrap: anywhere; }
+}

@@ -22,6 +22,13 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 1. The repo's Pages settings use the custom domain minyapps.com, with Enforce HTTPS on (certificate approved 28 October 2026, expires 26 January 2027, renewed by GitHub automatically). The certificate was only issued after the custom domain was removed and added again.
 2. GoDaddy DNS (GoDaddy's own nameservers): A records for @ pointing to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for www pointing to creativesimo.github.io. GoDaddy's default parking records were removed.
 
+## Website update — 10 November 2026
+
+- `home.html` is the separate Home page with the TidyTuck video and three desktop app cards. The original `index.html` remains the Desktop apps catalogue. The cards link to its individual app sections.
+- Every page shares the TidyTuck color palette and blue Minyapps wordmark. Home is in the navigation. The active section stays highlighted, and `navigation.js` provides the mobile menu.
+- Mac App Store buttons link to the public listings for all three desktop apps. Availability varies by storefront. Button captions are blank with their original spacing preserved.
+- The sitemap includes nine canonical URLs, including Home. Main content updates for the desktop catalogue and product pages are dated 10 November 2026. The Google ownership tag, consent controls and analytics configuration remain in place.
+
 ## SEO and status (29 October 2026)
 - Each page has its own title and description, canonical, Open Graph and Twitter tags (`assets/share-card.png`), and favicons (`favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/minyapps-mark-512.png`).
 - `index.html` carries JSON-LD (Organization, WebSite and 3 SoftwareApplication).

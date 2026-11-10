@@ -1,27 +1,35 @@
-/* minyapps.com — one stylesheet for every page. Colours follow the app family (blue #076EFF). */
+/* Shared Minyapps palette, from the TidyTuck page. */
 :root {
-  --blue: #076eff;
-  --blue-ink: #0f66f0;
-  --ink: #111827;
-  --muted: #4d5e75;
+  --blue: #3a6db0;
+  --blue-ink: #3a6db0;
+  --ink: #1b2230;
+  --muted: #5d6676;
   --faint: #98a2b1;
-  --line: rgba(15, 23, 42, 0.1);
-  --page: #f4f7fb;
-  --card: #ffffff;
-  --tint: #e7f0ff;
-  --shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(15, 23, 42, 0.08);
+  --line: rgba(27, 34, 48, 0.08);
+  --page: #f6f1e8;
+  --page-wash:
+    radial-gradient(900px 700px at 0% 0%, #fbf7ef 0%, rgba(251, 247, 239, 0) 60%),
+    radial-gradient(1100px 900px at 100% 40%, rgba(195, 207, 245, 0.75) 0%, rgba(195, 207, 245, 0) 65%),
+    linear-gradient(170deg, #f6f1e8 0%, #ece9ef 40%, #dfe6f8 100%);
+  --card: rgba(255, 255, 255, 0.86);
+  --tint: #eef2fb;
+  --shadow: 0 1px 2px rgba(27, 34, 48, 0.04), 0 18px 44px rgba(58, 109, 176, 0.12);
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --blue-ink: #99d1ff;
-    --ink: #f3f5f8;
-    --muted: #b4bfcd;
+    --blue-ink: #9cc6f0;
+    --ink: #eef1f6;
+    --muted: #aab4c3;
     --faint: #5f6c80;
-    --line: rgba(255, 255, 255, 0.12);
-    --page: #0e141d;
-    --card: #161e2a;
-    --tint: #142033;
+    --line: rgba(255, 255, 255, 0.09);
+    --page: #141821;
+    --page-wash:
+      radial-gradient(900px 700px at 0% 0%, rgba(105, 165, 227, 0.16) 0%, rgba(105, 165, 227, 0) 60%),
+      radial-gradient(1100px 900px at 100% 40%, rgba(140, 120, 217, 0.18) 0%, rgba(140, 120, 217, 0) 65%),
+      linear-gradient(170deg, #141821 0%, #171c27 50%, #1b2131 100%);
+    --card: rgba(28, 34, 46, 0.86);
+    --tint: #232b3a;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
   }
 }
@@ -30,9 +38,12 @@
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
   color: var(--ink);
-  background: var(--page);
+  background-color: var(--page);
+  background-image: var(--page-wash);
+  background-attachment: fixed;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
@@ -43,21 +54,46 @@ img { max-width: 100%; display: block; }
 
 /* Header */
 .top { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(180%) blur(16px); -webkit-backdrop-filter: saturate(180%) blur(16px);
-  background: color-mix(in srgb, var(--page) 78%, transparent); border-bottom: 1px solid var(--line); }
+  background: color-mix(in srgb, var(--page) 72%, transparent); border-bottom: 1px solid var(--line); }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.brand { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--ink); }
+.brand { font-weight: 800; font-size: 22px; letter-spacing: -0.02em; color: var(--blue-ink); }
 .brand span { color: inherit; }
 .brand .suffix { color: var(--faint); font-weight: 700; }
 .brand:hover { text-decoration: none; }
 .top nav { display: flex; gap: 22px; font-size: 15px; }
 .top nav a { color: var(--muted); }
 .top nav a:hover { color: var(--ink); text-decoration: none; }
+.top nav a[aria-current] { color: var(--blue-ink); font-weight: 600; text-decoration: none; }
+footer nav a[aria-current] { color: var(--blue-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 5px; }
+.top a:focus-visible, .menu-toggle:focus-visible, footer nav a:focus-visible { outline: 2px solid var(--blue-ink); outline-offset: 3px; border-radius: 2px; }
+.menu-toggle { display: none; }
 
 /* Hero */
 .hero { text-align: center; padding: 80px 0 48px; }
 .hero h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.08; letter-spacing: -0.035em; margin: 0 0 18px; }
 .hero h1 em { font-style: normal; color: var(--blue); }
 .hero p { font-size: clamp(17px, 2.2vw, 20px); color: var(--muted); max-width: 640px; margin: 0 auto; }
+
+/* The homepage pairs the TidyTuck tour with three short desktop app cards. */
+.home-hero { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); align-items: center;
+  gap: clamp(30px, 4.5vw, 58px); padding: clamp(46px, 7vw, 92px) 0 clamp(42px, 6vw, 76px); }
+.home-hero, .home-desktop, .home-desktop .apps, .home-desktop .apps a { scroll-margin-top: 80px; }
+.home-app-name { margin: 0; font-size: 22px; font-weight: 750; line-height: 1.2; letter-spacing: -0.02em; }
+.home-hero h1 { margin: 0 0 18px; max-width: 12ch; font-size: clamp(38px, 4.9vw, 62px); line-height: 1.03; letter-spacing: -0.045em; }
+.home-hero h1 span { color: var(--blue-ink); }
+.home-hero .phone-more { background: linear-gradient(110deg, #35669f, #5c4a9c); }
+.home-film { margin: 0; min-width: 0; }
+.home-film video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain;
+  border: 1px solid var(--line); border-radius: 24px; background: var(--tint); box-shadow: var(--shadow); }
+.home-film figcaption { margin: 10px 4px 0; color: var(--muted); font-size: 14px; }
+.home-desktop { border-top: 1px solid var(--line); padding: 30px 0 clamp(40px, 6vw, 64px); }
+.home-desktop .apps { margin-bottom: 0; }
+.home-hero a:focus-visible, .home-film video:focus-visible, .home-desktop a:focus-visible { outline: 3px solid var(--blue-ink); outline-offset: 4px; }
+@media (max-width: 820px) {
+  .home-hero { grid-template-columns: minmax(0, 1fr); }
+  .home-hero h1 { max-width: 15ch; }
+}
+@media (max-width: 420px) { .home-film video { border-radius: 16px; } }
 
 /* The three apps, side by side */
 .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 0 0 22px; }
@@ -281,15 +317,27 @@ footer nav { flex-wrap: wrap; }
 @media (max-width: 820px) { .phone-apps { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
 @media (prefers-reduced-motion: reduce) { .phone-more, .phone-more:hover { transition: none; transform: none; } }
 
-/* Narrow phones: four nav links beside the logo; Privacy stays in the footer */
-@media (max-width: 560px) {
-  .top nav { gap: 13px; font-size: 13.5px; }
-  .top nav a { white-space: nowrap; }
-  .top .wrap { gap: 14px; }
+/* Keep the links available if the menu script does not load. */
+@media (max-width: 767px) {
+  .top .wrap { height: auto; align-items: flex-start; flex-direction: column; gap: 2px; padding: 6px 0; }
+  .top nav { width: 100%; flex-wrap: wrap; justify-content: space-between; gap: 2px 8px; font-size: 13px; }
+  .top nav a { white-space: nowrap; padding: 5px 0; }
   .brand { font-size: 20px; flex-shrink: 0; }
-  .top nav a[href="privacy.html"] { display: none; }
+  .top.has-menu .wrap { height: 60px; flex-direction: row; align-items: center; }
+  .has-menu .menu-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+    padding: 0 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; }
+  .has-menu nav { position: absolute; top: calc(100% + 6px); right: 20px; width: min(280px, calc(100% - 40px));
+    flex-direction: column; flex-wrap: nowrap; gap: 0; padding: 6px; background: var(--page);
+    border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); font-size: 15px;
+    max-height: calc(100dvh - 80px); overflow-y: auto; }
+  .has-menu .menu-toggle[aria-expanded="false"] + nav { display: none; }
+  .has-menu nav a { display: flex; align-items: center; min-height: 44px; padding: 8px 12px; border-radius: 9px; }
+  .has-menu nav a[aria-current] { background: var(--tint); }
 }
-@media (max-width: 370px) { .top nav { gap: 10px; font-size: 13px; } .brand { font-size: 19px; } }
+@media (max-width: 370px) { .top .wrap { width: calc(100% - 24px); } }
+
+/* Keep linked sections clear of the sticky header. */
+main [id] { scroll-margin-top: 84px; }
 
 /* Moving between pages: the page fades and rises while the top bar stays put (browsers without
    cross-page transitions simply change page as before) */
@@ -305,6 +353,7 @@ footer nav { flex-wrap: wrap; }
 .rv { opacity: 0; transform: translate3d(0, 28px, 0);
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: var(--rv-delay, 0s); }
 .rv.in { opacity: 1; transform: none; }
+.rv:focus-within { opacity: 1; transform: none; transition: none; }
 .tt-demo, .app .demo, .product-screenshot, .tt-tour { will-change: translate; }
 
 @media (prefers-reduced-motion: reduce) {
