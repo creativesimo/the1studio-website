@@ -290,3 +290,24 @@ footer nav { flex-wrap: wrap; }
   .top nav a[href="privacy.html"] { display: none; }
 }
 @media (max-width: 370px) { .top nav { gap: 10px; font-size: 13px; } .brand { font-size: 19px; } }
+
+/* Moving between pages: the page fades and rises while the top bar stays put (browsers without
+   cross-page transitions simply change page as before) */
+@view-transition { navigation: auto; }
+.top { view-transition-name: site-top; }
+::view-transition-old(root) { animation: page-out 0.22s cubic-bezier(0.4, 0, 1, 1) both; }
+::view-transition-new(root) { animation: page-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both; }
+::view-transition-group(site-top) { animation-duration: 0.35s; }
+@keyframes page-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes page-in { from { opacity: 0; transform: translateY(14px); } }
+
+/* Content rising in as it scrolls into view (motion.js adds these only below the fold) */
+.rv { opacity: 0; transform: translate3d(0, 28px, 0);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: var(--rv-delay, 0s); }
+.rv.in { opacity: 1; transform: none; }
+.tt-demo, .app .demo, .product-screenshot, .tt-tour { will-change: translate; }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  .rv { opacity: 1; transform: none; transition: none; }
+}

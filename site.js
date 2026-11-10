@@ -1,10 +1,20 @@
 // "Copy" buttons (the support page's email address): copying works even without a mail app.
+// The address isn't written on the page, so older browsers fall back to a hidden text box.
 document.querySelectorAll("button[data-copy]").forEach(function (button) {
   var original = button.textContent;
+  var oldWay = function (text) {
+    var box = document.createElement("textarea");
+    box.value = text; box.setAttribute("readonly", ""); box.style.cssText = "position:fixed;opacity:0;pointer-events:none";
+    document.body.appendChild(box); box.select();
+    var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    box.remove(); return ok;
+  };
   button.addEventListener("click", function () {
-    var done = function (text) { button.textContent = text; setTimeout(function () { button.textContent = original; }, 2500); };
-    if (navigator.clipboard) navigator.clipboard.writeText(button.dataset.copy).then(function () { done("Copied!"); }, function () { done("Select the address above to copy it"); });
-    else done("Select the address above to copy it");
+    var text = button.dataset.copy;
+    var done = function (label) { button.textContent = label; setTimeout(function () { button.textContent = original; }, 2500); };
+    var fallback = function () { done(oldWay(text) ? "Copied!" : "Use Email us instead"); };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { done("Copied!"); }, fallback);
+    else fallback();
   });
 });
 
