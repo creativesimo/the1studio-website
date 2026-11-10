@@ -30,6 +30,16 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - `phone-apps.html` is the Phone apps category. Its TidyTuck card opens `tidytuck.html`, the app detail page.
 - The sitemap includes ten canonical URLs, including Home at `/` and the Desktop apps catalogue at `/desktop-apps.html`. Main content updates for the desktop catalogue and product pages are dated 10 November 2026. The Google ownership tag, consent controls and analytics configuration remain in place.
 
+## Security and download wording — 10 November 2026
+
+HTTPS enforcement and the certificate are managed by GitHub Pages. HTTP and www requests redirect to https://minyapps.com/. All site assets use HTTPS or same-origin URLs. Pages include a meta Content Security Policy restricting executable scripts to the site and Google Tag Manager, with the Google Analytics endpoints required for the consented, non-advertising setup. Referrers use strict-origin-when-cross-origin. Executable redirects live in site-routes.js so inline script execution can stay blocked. Keep future executable scripts external, and check policy compatibility before adding new external services.
+
+The security contact is published at /.well-known/security.txt using the existing support address. The contact file expires on 9 November 2027 and should be reviewed before then. This file supplies a reporting contact, not a security certification.
+
+GitHub Pages does not currently emit custom response headers for this domain. The meta policy cannot supply HSTS, X-Content-Type-Options, frame-ancestors or a Permissions-Policy response header. Adding those server-level controls requires an edge proxy or a hosting configuration that supports headers. Company filters can additionally restrict new or uncategorized domains.
+
+Desktop search titles and descriptions emphasize free downloads and trying the apps. Product FAQs and the catalogue retain the trial and one-time-unlock details. TidyTuck is a paid iPhone download, so the free-download descriptions apply specifically to the desktop apps.
+
 ## SEO and status (29 October 2026)
 - Each page has its own title and description, canonical, Open Graph and Twitter tags (`assets/share-card.png`), and favicons (`favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/minyapps-mark-512.png`).
 - `index.html` carries JSON-LD (Organization, WebSite and 3 SoftwareApplication).
