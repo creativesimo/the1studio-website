@@ -27,7 +27,8 @@ Domain setup (the `CNAME` file holds `minyapps.com`):
 - `index.html` is the Home page at `https://minyapps.com/`, with the TidyTuck video and three desktop app cards. `desktop-apps.html` is the Desktop apps catalogue. `home.html` redirects to `/` for existing links. The cards link to its individual app sections.
 - Every page shares the TidyTuck color palette and blue Minyapps wordmark. Home is in the navigation. The active section stays highlighted, and `navigation.js` provides the mobile menu.
 - Mac App Store buttons link to the public listings for all three desktop apps. Availability varies by storefront. Button captions are blank with their original spacing preserved.
-- The sitemap includes nine canonical URLs, including Home at `/` and the Desktop apps catalogue at `/desktop-apps.html`. Main content updates for the desktop catalogue and product pages are dated 10 November 2026. The Google ownership tag, consent controls and analytics configuration remain in place.
+- `phone-apps.html` is the Phone apps category. Its TidyTuck card opens `tidytuck.html`, the app detail page.
+- The sitemap includes ten canonical URLs, including Home at `/` and the Desktop apps catalogue at `/desktop-apps.html`. Main content updates for the desktop catalogue and product pages are dated 10 November 2026. The Google ownership tag, consent controls and analytics configuration remain in place.
 
 ## SEO and status (29 October 2026)
 - Each page has its own title and description, canonical, Open Graph and Twitter tags (`assets/share-card.png`), and favicons (`favicon.ico`, `assets/favicon-32.png`, `assets/apple-touch-icon.png`, `assets/minyapps-mark-512.png`).
