@@ -12,7 +12,8 @@
   var apps = {
     "NameThatFile": "namethatfile.html",
     "Image Resizer": "image-resizer.html",
-    "Image Optimizer": "image-optimizer.html"
+    "Image Optimizer": "image-optimizer.html",
+    "TidyTuck": "tidytuck.html"
   };
 
   function readChoice() {
@@ -133,7 +134,7 @@
     if (!target) return;
     var app = target.dataset.app;
     var store = target.dataset.store;
-    if (Object.prototype.hasOwnProperty.call(apps, app) && (store === "mac" || store === "windows")) {
+    if (Object.prototype.hasOwnProperty.call(apps, app) && (store === "mac" || store === "windows" || store === "ios")) {
       event("store_click", {
         app_name: app, store: store,
         availability: target.tagName === "BUTTON" ? "coming_soon" : "available"

@@ -68,6 +68,16 @@ footer nav a[aria-current] { color: var(--blue-ink); font-weight: 600; text-deco
 .top a:focus-visible, .menu-toggle:focus-visible, footer nav a:focus-visible { outline: 2px solid var(--blue-ink); outline-offset: 3px; border-radius: 2px; }
 .menu-toggle { display: none; }
 
+.tt-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.tt-badge { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px 10px 16px; border-radius: 14px; background: #111; color: #fff; }
+.tt-badge svg { width: 26px; height: 26px; }
+.tt-badge small { display: block; font-size: 11px; opacity: 0.85; line-height: 1.1; }
+.tt-badge b { display: block; font-size: 19px; line-height: 1.15; letter-spacing: -0.01em; }
+.tt-badge:hover { text-decoration: none; }
+.tt-badge:focus-visible { outline: 3px solid var(--blue-ink); outline-offset: 4px; }
+.tt a.tt-badge, .tt a.store { color: #fff; }
+.app-details-link { font-weight: 650; padding: 10px 0; }
+
 /* Hero */
 .hero { text-align: center; padding: 80px 0 48px; }
 .hero h1 { font-size: clamp(36px, 6vw, 58px); line-height: 1.08; letter-spacing: -0.035em; margin: 0 0 18px; }
